@@ -12,14 +12,16 @@ const CostItem = (props) => {
     };
 
     return (
-        <Card className='cost-item'>
-            <CostDate date={props.date}/>
-            <div className='cost-item__description'>
-                <h2>{name}</h2>
-                <div className='cost-item__price'>${props.price}</div>
-                <button onClick={changeNameHandler}>Edit</button>
-            </div>
-        </Card>
+        <li>
+            <Card className='cost-item'>
+                <CostDate date={props.date}/>
+                <div className='cost-item__description'>
+                    <h2>{name}</h2>
+                    <div className='cost-item__price'>${props.price}</div>
+                    <button onClick={changeNameHandler}>Edit</button>
+                </div>
+            </Card>
+        </li>
     );
 }
 

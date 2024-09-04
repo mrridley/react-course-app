@@ -11,19 +11,15 @@ const NewCost = (props) => {
             id: Math.random().toString()
         };
         props.onAddCost(_costData);
-        switchFormState();
-    }
-
-    const switchFormState = () => {
-        setShowForm(prevState => !prevState);
+        setShowForm(false);
     }
 
     const onAddButtonClickHandler = (event) => {
-        switchFormState();
+        setShowForm(true);
     }
 
     const onCancelFormHandler = (event) => {
-        switchFormState();
+        setShowForm(false);
     }
 
     return (

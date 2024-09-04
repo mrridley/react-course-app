@@ -17,13 +17,13 @@ const INITIAL_COST = [
     },
     {
         id: 'c3',
-        date: new Date(1999, 5, 14),
+        date: new Date(2023, 5, 14),
         price: 10,
         name: 'Socks'
     },
     {
         id: 'c4',
-        date: new Date(1999, 5, 14),
+        date: new Date(2023, 5, 15),
         price: 20,
         name: 'Cat Food'
     }

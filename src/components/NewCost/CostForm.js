@@ -10,32 +10,14 @@ const CostForm = (props) => {
 
     const nameChangeHandler = (event) => {
         setName(event.target.value);
-        /*setUserInput( {
-            ...userInput,
-            name: event.target.value,
-        });*/
-/*        setUserInput((previousState)=>{
-            return {
-                ...previousState,
-                name: event.target.value
-            }
-        })*/
     }
 
     const priceChangeHandler = (event) => {
         setPrice(event.target.value);
-/*        setUserInput( {
-            ...userInput,
-            price: event.target.value,
-        });*/
     }
 
     const dateChangeHandler = (event) => {
         setDate(event.target.value);
-/*        setUserInput( {
-            ...userInput,
-            date: event.target.value,
-        });*/
     };
 
     const submitHandler = (event) => {
@@ -51,6 +33,10 @@ const CostForm = (props) => {
         setName('');
         setPrice('');
         setDate('');
+    }
+
+    const onCancelClickHandler = (event) => {
+        props.onCancelForm();
     }
 
     return <form onSubmit={submitHandler}>
@@ -69,6 +55,7 @@ const CostForm = (props) => {
             </div>
             <div className='new-cost__actions'>
                 <button type='submit'>Add spending</button>
+                <button type='button' onClick={onCancelClickHandler}>Cancel</button>
             </div>
         </div>
     </form>
